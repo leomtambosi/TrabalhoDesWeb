@@ -5,11 +5,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f5f5f5;
+    background-color: #f0aeae;
 }
 
 .container {
-    background: #fff;
+    background: #f74949;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@ button {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: #8d9fb3;
     color: #fff;
     cursor: pointer;
     margin-top: 30px;
@@ -52,7 +52,7 @@ ul {
 }
 
 li {
-    background: #beb6b6;
+    background: #ee7676;
     margin: 5px 0;
     padding: 10px;
     border-radius: 4px;
@@ -62,6 +62,7 @@ li {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    color: white;
 }
 
 li:hover {
@@ -71,3 +72,4 @@ li:hover {
 li.dragging {
     opacity: 0.5;
 }
+
