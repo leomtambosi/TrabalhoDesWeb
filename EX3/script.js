@@ -1,37 +1,42 @@
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let currentIndex = 0;
-let slideInterval = setInterval(showNextSlide, 3000); // Transição automática a cada 3 segundos
+let slideIndex = 0;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) {
-      slide.classList.add('active');
-    }
-  });
+// Show the slide at a specific index
+function showSlides(n) {
+  if (n >= slides.length) { slideIndex = 0; }
+  if (n < 0) { slideIndex = slides.length - 1; }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex].style.display = "block";  
+  dots[slideIndex].className += " active";
 }
 
-function showNextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
+// Go to the next or previous slide
+function plusSlides(n) {
+  slideIndex += n;
+  showSlides(slideIndex);
 }
 
-function showPrevSlide() {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
+// Set a specific slide based on dot click
+function currentSlide(n) {
+  slideIndex = n - 1;
+  showSlides(slideIndex);
 }
 
-// Controle dos botões
-nextBtn.addEventListener('click', () => {
-  clearInterval(slideInterval);
-  showNextSlide();
-  slideInterval = setInterval(showNextSlide, 3000);
-});
+// Automatic slide transition
+function autoShowSlides() {
+  plusSlides(1);
+  setTimeout(autoShowSlides, 3000); // Change image every 3 seconds
+}
 
-prevBtn.addEventListener('click', () => {
-  clearInterval(slideInterval);
-  showPrevSlide();
-  slideInterval = setInterval(showNextSlide, 3000);
-});
+// Initialize the first slide and start the auto transition
+showSlides(slideIndex);
+autoShowSlides();

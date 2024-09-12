@@ -1,28 +1,22 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+// Select all tab buttons and content sections
+const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-content");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+// Function to handle tab switching
+function openTab(event, tabIndex) {
+  // Remove the "active" class from all tabs and content
+  tabs.forEach(tab => tab.classList.remove("active"));
+  tabContents.forEach(content => content.classList.remove("active"));
+
+  // Add the "active" class to the clicked tab and the corresponding content
+  event.currentTarget.classList.add("active");
+  document.getElementById(`tab-${tabIndex}`).classList.add("active");
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+// Add event listeners to each tab
+tabs.forEach(tab => {
+  tab.addEventListener("click", function(e) {
+    const tabIndex = this.getAttribute("data-tab"); // Get the associated tab content ID
+    openTab(e, tabIndex);
+  });
+});
