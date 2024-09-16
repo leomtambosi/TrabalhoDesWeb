@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     position: 'bottom',
                     title: {
                         display: true,
-                        text: 'Valor Vertical'
+                        text: 'Valor Horizontal'
                     }
                 },
                 y: {
                     title: {
                         display: true,
-                        text: 'Valor Horizontal'
+                        text: 'Valor Vertical'
                     }
                 }
             },
