@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const addTaskButton = document.getElementById('addTaskButton');
     const taskList = document.getElementById('taskList');
 
-    // Adiciona uma nova tarefa
     addTaskButton.addEventListener('click', () => {
         const taskText = taskInput.value.trim();
         if (taskText === '') return;
@@ -11,12 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
         taskInput.value = '';
     });
 
-    // Adiciona tarefa ao DOM
     function addTask(text) {
         const li = document.createElement('li');
         li.textContent = text;
 
-        // Botão de deletar
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'X';
         deleteButton.className = 'delete-btn';
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         li.appendChild(deleteButton);
         li.draggable = true;
 
-        // Manipuladores de arrastar e soltar
         li.addEventListener('dragstart', () => {
             li.classList.add('dragging');
         });
@@ -39,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         taskList.appendChild(li);
     }
 
-    // Permite arrastar e soltar os itens da lista
     taskList.addEventListener('dragover', (e) => {
         e.preventDefault();
         const draggingItem = document.querySelector('.dragging');
