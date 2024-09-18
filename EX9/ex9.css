@@ -1,6 +1,6 @@
-
 body {
     font-family: Arial, sans-serif;
+    background-color: #C0BAB8;
 }
 
 #openModalBtn {
@@ -12,7 +12,7 @@ body {
 }
 
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -22,17 +22,26 @@ body {
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
     animation: fadeIn 0.5s;
+    justify-items: center;
+    align-items: center;
 }
 
+
 .modal-content {
-    background-color: #000000;
+    background-color: #fffbfb;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 400px;
     animation: slideIn 0.5s;
-    color: white;
+    color: black;
+    justify-items: center;
+    align-items: center;
+}
+
+h2 {
+    margin-left: 166PX;
 }
 
 @keyframes fadeIn {
@@ -51,18 +60,24 @@ body {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    justify-items: center;
+    align-items: center;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-    color: black;
+    color: rgb(255, 251, 251);
     text-decoration: none;
     cursor: pointer;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
+
 
 .error-message {
     color: red;
@@ -75,4 +90,9 @@ button {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #0679bf;
+    color: white;
+    margin-left: 160PX;
+    align-items: center;
+    justify-content: center;
 }
