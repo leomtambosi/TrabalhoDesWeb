@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +50,7 @@ nav ul li a:hover {
 }
 
 .content {
-    margin-top: 80px; /* Ajuste para compensar a altura do menu fixo */
+    margin-top: 80px; 
     padding: 0 20px;
 }
 
