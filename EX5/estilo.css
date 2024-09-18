@@ -9,7 +9,7 @@
   }
   
   .header {
-    background: #2d3e97;
+    background: #0679BF;
     padding-inline: 16px;
   }
   
@@ -35,7 +35,7 @@
   
   .nav-list a {
     font-size: 18px;
-    color: #fff;
+    color: #C0BAB8;
     padding-block: 16px;
   }
   
@@ -48,7 +48,7 @@
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid #fff;
+    border-top: 3px solid #C0BAB8;
     cursor: pointer;
   }
   
@@ -58,7 +58,7 @@
     display: block;
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: #C0BAB8;
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
@@ -76,7 +76,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: #2d3e97;
+      background: #0679BF;
       clip-path: circle(100px at 90% -15%);
       transition: 1s ease-out;
   
