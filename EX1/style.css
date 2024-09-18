@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #e0a353;
+    background-color: #C0BAB8;
 }
 
 .form-container {
@@ -47,12 +47,12 @@ button {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #e95b08;
+    background-color: #0679bf;
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #e41102;
+    background-color: #0e5785;
 }
