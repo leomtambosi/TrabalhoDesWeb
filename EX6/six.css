@@ -7,17 +7,18 @@
 
 body {
     font-family: Arial, sans-serif;
+    color: whi;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-color: #f7f7f7;
+    background-color: #C0BAB8;
 }
 
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #0679BF;
     padding: 15px 0;
     z-index: 1000;
 }
@@ -43,9 +44,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #444;
+    background-color: #0e5785;
     border-radius: 4px;
-    color: #ffcc00;
+    color: #C0BAB8;
 }
 
 .content {
@@ -60,12 +61,12 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #eaeaea;
-    border-bottom: 2px solid #ccc;
+    background-color: #C0BAB8;
+    border-bottom: 2px solid;
 }
 
 section:nth-child(odd) {
-    background-color: #f4f4f4;
+    background-color: #C0BAB8;
 }
 
 h2 {
