@@ -6,7 +6,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #C0BAB8;
 }
 
 .tabs-container {
@@ -25,19 +25,19 @@ body {
 }
 
 .tab {
-  background-color: #f1f1f1;
+  background-color: #0679BF;
   border: none;
   padding: 14px 20px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
   border-radius: 10px 10px 0 0;
+  color: white;
 }
 
 .tab.active {
-  background-color: #ffffff;
+  background-color: #0E5785;
   border-bottom: 2px solid #f4f4f4;
-  color: #000;
 }
 
 .tab:hover {
@@ -46,7 +46,7 @@ body {
 
 .tab-content-container {
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #0679BF;
   border-radius: 0 0 10px 10px;
   background-color: #ffffff;
 }
