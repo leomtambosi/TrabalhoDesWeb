@@ -1,19 +1,15 @@
-// Declaração global para o número de linhas e colunas
 const rows = 3;
 const cols = 3;
 
 let board = [];
 let currentPlayer = 'X';
 
-// Função para iniciar ou reiniciar o jogo.
 function startGame() {
-    const gameBoard = document.getElementById('gameBoard'); // Certifique-se de buscar o elemento no início da função.
-    // Limpa o conteúdo do tabuleiro e reinicia o array.
+    const gameBoard = document.getElementById('gameBoard');
     gameBoard.innerHTML = '';
     board = Array(rows).fill().map(() => Array(cols).fill(''));
     currentPlayer = 'X';
     
-    // Preenche o tabuleiro com células.
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             const cell = document.createElement('div');
@@ -26,39 +22,32 @@ function startGame() {
     }
 }
 
-// Função chamada quando uma célula é clicada.
 function cellClicked() {
     const row = this.dataset.row;
     const col = this.dataset.col;
 
-    // Verifica se a célula já está ocupada.
     if (board[row][col] !== '') return;
 
-    // Preenche a célula e atualiza o texto.
     this.innerText = currentPlayer;
-    this.classList.add(currentPlayer); // Adiciona a classe 'X' ou 'O' para aplicar o estilo.
+    this.classList.add(currentPlayer); 
     board[row][col] = currentPlayer;
 
-    // Verifica se o jogador ganhou.
     if (checkWinner(currentPlayer)) {
         highlightWinningCells(currentPlayer);
         setTimeout(() => alert(currentPlayer + ' ganhou!'), 100);
-        setTimeout(startGame, 500); // Reinicia o jogo após um pequeno atraso.
+        setTimeout(startGame, 500); 
         return;
     }
 
-    // Verifica empate.
     if (checkDraw()) {
         alert('Empate!');
         startGame();
         return;
     }
 
-    // Alterna o jogador.
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 }
 
-// Verifica se há um vencedor.
 function checkWinner(player) {
     for (let i = 0; i < rows; i++) {
         if (board[i].every(cell => cell === player)) return true;
@@ -71,12 +60,10 @@ function checkWinner(player) {
     return false;
 }
 
-// Verifica se há empate.
 function checkDraw() {
     return board.flat().every(cell => cell !== '');
 }
 
-// Destaca as células vencedoras.
 function highlightWinningCells(player) {
     for (let i = 0; i < rows; i++) {
         if (board[i].every(cell => cell === player)) {
@@ -100,5 +87,4 @@ function highlightWinningCells(player) {
     }
 }
 
-// Inicia o jogo assim que o DOM é carregado.
 document.addEventListener('DOMContentLoaded', startGame);
