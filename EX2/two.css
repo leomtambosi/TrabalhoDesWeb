@@ -5,7 +5,7 @@ body {
     justify-content: center;
     height: 100vh;
     font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    background-color: #C0BAB8;
 }
 
 .game-board {
@@ -49,7 +49,7 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #0679BF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -58,7 +58,7 @@ body {
 }
 
 .btn-restart:hover {
-    background-color: #0056b3;
+    background-color: #0e5785;
 }
 
 .cell.winner {
