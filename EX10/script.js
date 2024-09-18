@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             datasets: [{
                 label: 'Pontos de Dados',
                 data: [],
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
+                backgroundColor: '#0679BF',
             }]
         },
         options: {
@@ -19,13 +17,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     position: 'bottom',
                     title: {
                         display: true,
-                        text: 'Valor Horizontal'
+                        text: 'Valor Horizontal',
+                    },
+                    grid: {
+                        color: 'black' // Cor da grade para o eixo X
                     }
                 },
                 y: {
                     title: {
                         display: true,
                         text: 'Valor Vertical'
+                    },
+                    grid: {
+                        color: 'black' // Cor da grade para o eixo Y
                     }
                 }
             },
@@ -37,6 +41,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
     });
+    
 
     document.getElementById('add-button').addEventListener('click', () => {
         const xValue = parseFloat(document.getElementById('x-value').value);
